@@ -1,0 +1,25 @@
+:root {
+    --bg-dark: #030303; /*030303*/
+    --font-gold: #9d8665;
+    --color-gold: #9D8665; /* GOLD*/
+    --color-dark-red: #710707; /* dark-rd*/
+    --color-white: #ffffff;
+    --color-grey: #999999;
+
+    --ffRoboto: "Roboto", sans-serif; /* font-family*/
+    --ffForum: "Forum", sans-serif ;
+    --fStyleNormal: normal;
+    --fweightBold: bold;/* font-weight: bold;*/
+    --fweightNormal: normal;/* font-weight: normal;*/
+    --fweightLighter: lighter;/*font-weight: lighter;*/
+    --fweight300: 300;/*font-weight: 300;*/
+    --fweight400: 400;/*font-weight: 400;*/
+    --fweight700: 700;/*font-weight: 700;*/
+
+    --fsize80: 80px;/*font-size: 80px;*/
+    --fsize50: 50px;/*font-size: 50px;*/
+    --fsize32: 32px;/*font-size: 32px;*/
+    --fsize28: 28px;/*font-size: 28px;*/
+    --fsize22: 22px;/*font-size: 28px;*/
+    --fsize18: 18px;/*font-size: 18px;*/
+}

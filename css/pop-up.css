@@ -1,0 +1,600 @@
+
+.pop-close{
+    position: absolute;
+    right: 0;
+    margin: 30px 30px 0 0;
+    cursor: pointer;
+}
+.pop-close:hover {
+    background-color: var(--color-gold);
+}
+
+.pop{
+    box-sizing: border-box;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    padding: 91px 235px;
+}
+.pop input, select, button{
+    cursor: pointer;
+}
+
+.pop-container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.flex-row{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.pop-container form{
+    padding: 90px 235px;
+}
+
+.pop-reg{
+    width: 400px;
+}
+.pop-reg-header::after{
+    bottom: -10px
+}
+.pop-date-time{
+    padding-top: 72px;
+}
+.pop-date-time input, .pop-contact input, .pop-contact select {
+    height: 45px;
+    border: 1px solid #030303;
+    box-shadow: 1px 1px 1px #030303;
+    margin-bottom: 20px;
+}
+
+.pop-date-time input{
+    box-sizing: border-box;
+    width: 190px;
+    padding: 0 14px 0 40px;
+    position: relative;
+
+}
+/* input date - change icon from background*/
+#pop-date {
+    cursor: pointer;
+    margin-right: 20px;
+    background: url("../assets/img/date.png") no-repeat 15px 14px, url('../assets/img/arrow-select.png') no-repeat 154px 12px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    font-family: var(--ffRoboto);
+    font-style: var(--fStyleNormal);
+}
+
+/* спрятал родной значек календаря который справа от даты*/
+#pop-date::-webkit-calendar-picker-indicator{
+    background: url('..') no-repeat 154px 12px;
+}
+
+/*#pop-time спрятал родной иконку -время- которяая справа от времени */
+#pop-time::-webkit-calendar-picker-indicator{
+    background: url("..") no-repeat;
+    /*display: none;*/
+}
+#pop-time::-webkit-calendar-picker-indicator::marker{
+    display: none;
+}
+
+#pop-time{
+    appearance: none;
+    font-weight: 400;
+    line-height: 21px;
+    font-family: var(--ffRoboto);
+    font-style: var(--fStyleNormal);
+    color: gray;
+    box-sizing: border-box;
+    height: 45px;
+    width: 190px;
+    cursor: pointer;
+    border: 1px solid #030303;
+    box-shadow: 1px 1px 1px #030303;
+    padding-left: 60px;
+    font-size: 18px;
+    background: url("../assets/img/Time.png") no-repeat 15px 14px, url('../assets/img/arrow-select.png') no-repeat 153px 13px;
+
+}
+
+/* input date #pop-date placeholder меняю шрифт и управялю им  */
+#pop-date::-webkit-input-placeholder{
+    padding-left: 28px;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+/*вставил свой значек в тайм - вместо стокового*/
+.pop-date-time input[type="time"]::-webkit-calendar-picker-indicator{
+    background-image: url('../assets/img/arrow-select.png');
+}
+.pop-contact input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+.pop-contact input, select{
+    padding-left: 44px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    align-items: center;
+    color: #030303;
+}
+
+.pop-contact .pop-name {
+    background: url('../assets/img/name.png') no-repeat 15px 15px;
+}
+.pop-contact .pop-email {
+    background: url('../assets/img/email.png') no-repeat 15px 15px;
+}
+.pop-contact .pop-tel {
+    background: url('../assets/img/tel.png') no-repeat 15px 10px;
+}
+
+/*Задаёт стиль кнопки раскрытия списка, созданного с помощью тега <select>*/
+.pop-contact select::-ms-expand {
+    display: none;
+}
+
+.pop-contact select {
+    appearance: none; /*спрятали стрелку селект*/
+    background-image: url('../assets/img/ticket.png'), url('../assets/img/arrow-select.png');
+    background-position: 15px 15px , 367px 12px;
+    background-repeat: no-repeat, no-repeat;
+}
+
+div.pop-reg-header h2{
+    font-weight: var(--fweight400);
+    font-size: var(--fsize50);
+    line-height: 55px;
+    letter-spacing: 0;
+    margin-bottom: 13px;
+}
+
+div.pop-reg-header p{
+    font-weight: normal;
+    font-size: var(--fsize18);
+    line-height: 21px;
+    color: var(--color-dark-red);
+}
+
+
+.pop-contact{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+
+.pop-contact input, select{
+    width: 100%;
+    box-sizing: border-box;
+}
+.entry-ticket{
+    border: 1px solid var(--bg-dark);
+    box-shadow: 1px 1px 1px #030303;
+    padding: 9px 15px 9px;
+}
+.entry-ticket h6{
+    font-size: var(--fsize18);
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #9D8665;
+    margin-bottom: 21px;
+    font-weight: var(--fweight400);
+    letter-spacing: 0
+}
+
+.entry-ticket h6::after{
+    bottom: -5px
+}
+.amount-count-pop p{
+    font-weight: var(--fweight400);
+    font-size: 18px;
+    line-height: 21px;
+    margin: 4px 0;
+}
+
+.entry-ticket .basic, .entry-ticket .senior {
+    width: 105px;
+    height: 27px;
+    border: 1px solid #030303
+}
+.entry-ticket .basic input, .entry-ticket .senior input {
+    font-size: 18px;
+    line-height: 21px;
+    width: 35px;
+}
+
+.entry-ticket .amount-count-pop button{
+    width: 35px;
+    height: 25px;
+    background: none;
+    background: black;
+    font-weight: normal;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+}
+.entry-ticket button:hover{
+    background-color: var(--color-gold);
+}
+/*убрать стрелки в инпуте*/
+.amount-count-pop input::-webkit-inner-spin-button{
+    display: none;
+}
+
+.entry-ticket .senior{
+    margin-bottom: 0;
+
+}
+.senior-ticket{
+    margin: 5px 0 0 0;
+
+}
+.senior-ticket p{
+    margin-top: 5px;
+
+}
+.pop-over-and-total{
+
+}
+.pop-over-and-total-wrapper{
+    width: 530px;
+    background: #FFFFFF;
+    border: 1px solid #030303;
+    box-sizing: border-box;
+    padding: 25px 30px 25px 30px;
+}
+
+.overview-left h3{
+    font-family: var(--ffRoboto);
+    font-weight: 500;
+    font-size: var(--fsize32);
+    line-height: 37px;
+    margin-bottom: 2px;
+    color: #272727;
+}
+.overview-left h4{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #740C11;
+    opacity: 0.9;
+    margin-bottom: 12px;
+}
+.overview-left p{
+    background: url("../assets/img/date.png") no-repeat 0 5px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #030303;
+    margin-bottom: 6px;
+    padding-left: 30px;
+}
+.overview-left p:nth-child(2n){
+    background: url("../assets/img/time.png") no-repeat;
+}
+.overview-left p:last-child{
+    background: url("../assets/img/excebishion.png") no-repeat;
+}
+.pop-total{
+    margin-top: 16px;
+}
+.count-total p{
+    font-weight: var(--fweight400);
+    font-size: 22px;
+    line-height: 26px;
+    color: #030303;
+    margin-bottom: 5px;
+}
+.count-total span{
+    color: #A4A4A3;;
+    background-color: black;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.pop-total .b-price, .pop-total .s-price{
+    color: black;
+    background: none;
+    border-radius: 0;
+    font-size: 22px;
+    padding: 0
+}
+.count-total .underline-title::after{
+    bottom: -9px;
+
+}
+.sum-total{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+}
+.sum-total h3:first-child{
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+}
+.pop-card-pay{
+    position: relative;
+
+}
+.card-one-wrapp{
+    margin-left: 20px;
+}
+.card-one{
+    position: relative;
+    z-index: 2;
+}
+.card-one, .card-two{
+    width: 360px;
+    height: 211px;
+    background-color: #BCBCBC;
+    background-image: url("../assets/img/Visa.png"), url("../assets/img/Mastercard.png");
+    background-position: 89% 15%, 89% 35%;
+    background-repeat: no-repeat
+}
+.card-two{
+    position: absolute;
+    top: 30px;
+    left: 108px;
+    background-color: #939393;
+    background-image: url("../assets/img/magn.png");
+    background-position: 89% 15%;
+    background-repeat: no-repeat;
+}
+.card-one p{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+}
+.card-one input{
+    height: 35px;
+    border: 0;
+
+}
+
+.card-one input::-webkit-inner-spin-button {
+    width: 25px;
+    opacity: 1;
+    display: block;
+}
+
+.card-number{
+    width: 215px;
+}
+
+.card-exp-date{
+    width: 100px;
+    box-sizing: border-box;
+    margin-right: 15px;
+}
+.card-exp-date::-webkit-textfield-decoration-container{
+    padding-left: 10px;
+}
+
+.card-exp-holder-name{
+    width: 320px;
+}
+
+.card-two-wrapp{
+    text-align: center;
+    position: absolute;
+    top: 85px;
+    left: 265px;
+    width: 75px;
+    align-items: center;
+}
+.card-two-wrapp p:first-child{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 5px;
+}
+
+
+.card-two-wrapp p:nth-child(2n){
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.card-two-wrapp input{
+    width: 75px;
+    height: 35px;
+    border: none;
+    padding: 0;
+    margin-bottom: 6px;
+}
+
+.card-two-wrapp input::-webkit-inner-spin-button {
+    appearance: none; /*спрятали стрелку селект*/}
+
+.pop-btn-book-wrapp{
+    text-align: right;
+}
+.pop-btn-book{
+    margin-top: 56px;
+    width: 220px;
+    height: 45px;
+    color: white;
+    background-color: var(--color-dark-red);
+    font-weight: var(--fweight400);
+    font-size: var(--fsize22);
+    line-height: 26px;
+}
+.pop-btn-book:hover{
+    background-color: var(--color-gold);
+    transition: 1s;
+}
+
+.pop-container{
+    z-index: 10;
+    position: absolute; 
+    top: 44px;
+    left: -320%;
+    background-color: #ffffff;
+    transition: all 2s ease 0s;}
+
+.active {
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+#cover-div {
+    z-index: 9;
+    position: fixed;
+    background-color: #585f63;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: inherit;
+    height: 100%;
+    display: none;
+    opacity: 0.5;
+}
+
+@media (max-width: 1024px) {
+    .pop-container {
+        max-width: 1024px;
+        top: 0;
+        overflow: auto;
+        height: 85%;
+    }
+    .pop-container form {
+        padding: 75px 25px 30px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .pop-container.active {
+        max-width: 590px;
+        left: 25px;
+        overflow: auto;
+        height: 100%;
+    }
+
+    .pop-container form {
+        flex-direction: column;
+        padding: 79px 30px 40px 30px;
+    }
+
+    .pop-reg.flex-col {
+        width: 530px;
+    }
+
+    .pop-reg768 .pop-date-time {
+        padding-top: 40px;
+    }
+
+    .pop-reg768 .pop-date-time input {
+        width: 251px;
+    }
+
+    #pop-date {
+        background: url(../assets/img/date.png) no-repeat 15px 14px, url(../assets/img/arrow-select.png) no-repeat 215px 12px;
+    }
+    #pop-time {
+        width: 251px;
+        background: url("../assets/img/Time.png") no-repeat 15px 14px, url('../assets/img/arrow-select.png') no-repeat 215px 13px;
+    }
+    .pop-contact select {
+        background-position: 15px 14px , 495px 12px;
+    }
+    .pop-over-and-total {
+        margin-top: 59px;
+    }
+}
+@media (max-width: 420px) {
+    .pop-container.active {
+        left: 0;
+    }
+    .pop-reg.flex-col{
+        width: 100%;
+    }
+    div.pop-reg-header h2 {
+        font-size: 32px;
+        line-height: 55px;
+        letter-spacing: 0;
+        margin-bottom: 13px;
+    }
+    .pop-date-time {
+        flex-direction: column;
+    }
+    #pop-date, #pop-time{
+        width: 100%;
+    }
+    .pop-over-and-total-wrapper {
+        width: 100%;}
+    .pop-over-and-total-wrapper {
+        padding: 25px 15px 25px 15px;
+    }
+    .card-one, .card-two {
+        width: 330px;
+        height: 209px;
+        background-position: 93% 15%, 93% 35%;
+    }
+    .card-exp-holder-name {
+        width: 290px;
+    }
+    .card-two {
+        position: RELATIVE;
+        margin-top: 20px;
+        top: 0;
+        left: 0;
+    }
+    .pop-btn-book {
+        margin-top: 40px;
+    }
+    #pop-date, #pop-time {
+        margin-bottom: 20px;
+        background: url(../assets/img/date.png) no-repeat 15px 14px, url(../assets/img/arrow-select.png) no-repeat 325px 12px;
+    }
+    .card-two-wrapp {
+        text-align: center;
+        position: absolute;
+        top: 85px;
+        left: 240px;
+        width: 75px;
+        align-items: center;
+    }
+
+
+}
+
+@media (max-width: 360px) {
+
+    .sum-total {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .card-one, .card-two {
+        background-position: 97% 15%, 97% 30%;
+    }
+}
+
+

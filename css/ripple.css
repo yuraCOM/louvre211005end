@@ -1,0 +1,19 @@
+
+.circle {
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    background-color: #ea0c0c;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale .5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
